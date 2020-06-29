@@ -1,4 +1,4 @@
- % normalizes the features in X using the standard deviation
+ % feature normalization function
 
 function [X_norm, mu, sigma] = featureNormalize(X)
 

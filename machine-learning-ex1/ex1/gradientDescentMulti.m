@@ -1,4 +1,4 @@
-% performs gradient descent to learn theta. Updates theta by taking num_iters gradient steps with learning rate alpha.
+% performs gradient descent for multivariate linear regression
 
 function [theta, J_history] = gradientDescentMulti(X, y, theta, alpha, num_iters)
 

@@ -1,4 +1,4 @@
-% performs gradient descent to learn theta
+% performs gradient descent
 
 function theta = gradientDescent(X, y, theta, alpha, iterations)
 

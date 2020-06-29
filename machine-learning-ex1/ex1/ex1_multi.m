@@ -1,4 +1,4 @@
-% gradient descent for multivariate linear regression
+% sample run of gradient descent for multivariate linear regression
 
 clear;
 close all;

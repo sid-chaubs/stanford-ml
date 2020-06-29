@@ -1,5 +1,4 @@
-% uses mean squared error function in to compute the cost of using theta as the parameter for linear regression to fit the data points in X and y.
-% compute cost for linear regression with multiple variables
+% compute cost for multivariate linear regression
 
 function J = computeCostMulti(X, y, theta)
 
