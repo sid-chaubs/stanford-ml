@@ -22,5 +22,5 @@ iterations = 1500;
 % learning rate per iteration
 alpha = 0.01;
 
-theta = gradientDescent(X, y, theta, alpha, iterations);
+[theta, J_hist] = gradientDescent(X, y, theta, alpha, iterations);
 fprintf('Expected theta values (approx): -3.6303 1.1664. Result: %f %f \n', theta(1), theta(2));
