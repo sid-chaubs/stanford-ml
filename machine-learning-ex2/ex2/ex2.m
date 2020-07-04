@@ -5,24 +5,17 @@ close all;
 clc;
 
 data = load('ex2data1.txt');
-X = data(:, [1, 2]); y = data(:, 3);
 
-%% ==================== Part 1: Plotting ====================
-%  We start the exercise by first plotting the data to understand the
-%  the problem we are working with.
+X = data(:, [1, 2]);
+y = data(:, 3);
 
-fprintf(['Plotting data with + indicating (y = 1) examples and o ' ... 'indicating (y = 0) examples.\n']);
+fprintf(['Plotting data with + indicating (y = 1) examples and o indicating (y = 0) examples.\n']);
 
 plotData(X, y);
 
-% Put some labels
 hold on;
-
-% Labels and Legend
 xlabel('Exam 1 score')
 ylabel('Exam 2 score')
-
-% Specified in plot order
 legend('Admitted', 'Not admitted')
 hold off;
 
@@ -66,7 +59,6 @@ fprintf('Expected gradients (approx):\n 0.043\n 2.566\n 2.647\n');
 
 fprintf('\nProgram paused. Press enter to continue.\n');
 pause;
-
 
 %% ============= Part 3: Optimizing using fminunc  =============
 %  In this exercise, you will use a built-in function (fminunc) to find the
@@ -129,6 +121,5 @@ p = predict(theta, X);
 fprintf('Train Accuracy: %f\n', mean(double(p == y)) * 100);
 fprintf('Expected accuracy (approx): 89.0\n');
 fprintf('\n');
-
 
 %}
