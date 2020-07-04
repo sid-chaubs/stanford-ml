@@ -1,7 +1,7 @@
 % computes sigmoid function value
 
-function g = sigmoid(x)
+function g = sigmoid(z)
 
-	g = e .^ x / (1 + e .^ x);
+	g = 1 ./ (1 + exp(-z));
 
 end

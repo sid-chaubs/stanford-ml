@@ -4,13 +4,13 @@ function [J, grad] = costFunction(theta, X, y)
 
 	m = length(y);
 
-	% hypothesis function
-	hx = arrayfun(@sigmoid, X * theta);
+	% current hypothesis
+	h = sigmoid(X * theta);
 
 	% cost function
-	J =  sum(-y .* log(hx) - (1 - y) .* log(1 - hx)) / m;
+	J = sum(-y' * log(h) - (1 - y)' * log(1 - h)) / m;
 
 	% gradient
-	grad = sum((hx - y) .* X) / m;
+	grad = sum((h - y)' * X) / m;
 
 end
