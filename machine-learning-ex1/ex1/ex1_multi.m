@@ -9,21 +9,28 @@ X = data(:, 1:2);
 y = data(:, 3);
 m = length(y);
 
-% max iterations for gradient descent
-num_iters = 2500;
-% learning rate per iteration
-alpha = 0.01;
-% initialize fitting parameters
+alpha = 0.1;
 theta = zeros(3, 1);
-
-% normalization and add intercept
 [X_norm mu sigma] = featureNormalize(X);
 X_norm = [ones(m, 1) X_norm];
 
 % run gradient descent
+num_iters = 1500;
 [theta, J_history] = gradientDescentMulti(X_norm, y, theta, alpha, num_iters);
+fprintf('Theta computed from gradient descent: \n');
+display(theta);
 
-fprintf('Theta computed from gradient descent: %f \n', theta);
+% run mini batch gradient descent
+num_iters = 10000;
+[theta, J_history] = miniBatchGradientDescent(X_norm, y, theta, alpha, num_iters, 10);
+fprintf('Theta computed from stochastic gradient descent: \n');
+display(theta);
+
+% run stochastic gradient descent
+num_iters = 10000;
+[theta, J_history] = stochasticGradientDescent(X_norm, y, theta, alpha, num_iters);
+fprintf('Theta computed from stochastic gradient descent: \n');
+display(theta);
 
 % predicted price for a 1650 sq-ft, 3 br house based on gradient descent results
 price = makePrediction([1650 3], mu, sigma, theta);
