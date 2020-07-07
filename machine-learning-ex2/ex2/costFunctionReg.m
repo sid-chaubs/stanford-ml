@@ -13,7 +13,7 @@ function [J, grad] = costFunctionReg(theta, X, y, lambda)
 	theta_reg = theta(2:end);
 
 	% cost function
-	J = ((-y' * log(h) - (1 - y)' * log((1 - h))) / m) + (sum(theta_reg .^ 2) * (lambda / (2 * m)));
+	J = (-y' * log(h) - (1 - y)' * log((1 - h))) / m + sum(theta_reg .^ 2) * lambda / (2 * m);
 
 	% gradient
 	grad = (1 / m) * X' * (h - y);

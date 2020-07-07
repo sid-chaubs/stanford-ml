@@ -11,6 +11,6 @@ function [J, grad] = costFunction(theta, X, y)
 	J = sum(-y' * log(h) - (1 - y)' * log(1 - h)) / m;
 
 	% gradient
-	grad = sum((h - y)' * X) / m;
+	grad = (h - y)' * X / m;
 
 end
