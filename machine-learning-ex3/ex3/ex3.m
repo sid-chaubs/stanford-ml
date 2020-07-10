@@ -1,7 +1,4 @@
-% test script for 1-vs-all logistic regression.
-
-% @todo predictOneVsAll.m
-% @todo predict.m
+% test script for one-vs-all logistic regression.
 
 clear;
 close all;

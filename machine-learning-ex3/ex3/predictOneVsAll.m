@@ -12,8 +12,8 @@ function p = predictOneVsAll(all_theta, X)
 	probabilities = sigmoid(X * all_theta');
 
 	for i = 1:m
-		[val num] = max(probabilities(i, 1:end));
-		p(i) = num;
+		[val idx] = max(probabilities(i, 1:end));
+		p(i) = idx;
 	end
 
 end
