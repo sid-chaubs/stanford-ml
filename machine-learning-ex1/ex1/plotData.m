@@ -2,6 +2,6 @@
 
 function plotData(x, y)
 
-	plot (x, y, 'rx', 'markersize', 10);
+	plot(x, y, 'rx', 'markersize', 10);
 
 end
