@@ -1,4 +1,4 @@
-% compute cost and gradient for logistic regression with regularization
+% applies regularization based on the lambda paramter to compute cost and gradient for logistic regression
 
 function [J, grad] = costFunctionReg(theta, X, y, lambda)
 

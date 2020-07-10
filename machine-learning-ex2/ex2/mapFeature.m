@@ -1,4 +1,4 @@
-% feature mapping function to polynomial features
+% maps the two input features to quadratic features used in the regularization exercise
 
 function out = mapFeature(X1, X2)
 

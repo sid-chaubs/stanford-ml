@@ -1,4 +1,4 @@
-% compute cost and gradient for logistic regression
+% computes the cost and gradient for logistic regression
 
 function [J, grad] = costFunction(theta, X, y)
 

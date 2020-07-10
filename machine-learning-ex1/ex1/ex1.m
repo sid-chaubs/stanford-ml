@@ -1,4 +1,4 @@
-% sample run of gradient descent for univariate linear regression
+% test run of gradient descent for univariate linear regression
 
 clear;
 close all;

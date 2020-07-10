@@ -1,4 +1,4 @@
-% predict whether the label is 0 or 1 using learned logistic
+% predicts whether the label is 0 or 1 using learned logistic
 
 function p = predict(theta, X)
 
